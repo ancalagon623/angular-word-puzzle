@@ -1,5 +1,3 @@
-import { rawPuzzles } from "./data";
-
 export enum PuzzleOptions {
   BBTheRoad,
   JKJourney,
@@ -7,7 +5,7 @@ export enum PuzzleOptions {
   GKCTraveler
 }
 
-interface rawPuzzle {
+interface RawPuzzleData {
   id: PuzzleOptions,
   tag: string,
   solution: string
@@ -18,7 +16,7 @@ export class Puzzle {
   private _fullSolution: string;
   private _puzzlePieces: string[];
 
-  constructor (puzz: rawPuzzle) {
+  constructor (puzz: RawPuzzleData) {
     this.id = puzz.id;
     this._fullSolution = puzz.solution;
     this._puzzlePieces = puzz.solution.trim().split(' ');

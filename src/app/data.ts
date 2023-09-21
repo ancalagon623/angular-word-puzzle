@@ -1,4 +1,4 @@
-import { PuzzleOptions } from "./puzzle"
+import { PuzzleOptions } from "./models/puzzle"
 
 export const rawPuzzles = [ 
   {

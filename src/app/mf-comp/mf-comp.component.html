@@ -1,2 +1,5 @@
-<p>Click to reveal the secret message!</p>
-<h6>The secret message is: {{ secretMessage }}</h6>
+<div class="options-bar">
+  <div class="puzzle-card" *ngFor="let puzzle of puzzles">
+    {{ puzzle.fullSolution }}
+  </div>
+</div>

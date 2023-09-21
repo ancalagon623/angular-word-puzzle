@@ -14,9 +14,14 @@ MINIGAME STRUCTURE (MVP)
 
 
 Technical Plan
-* Clear the default template (comment it out so I can still reference it!)
+= Clear the default template (comment it out so I can still reference it!)
+= I'll need a main component that provides the wrapper for everything. This is where I'll add a service to serve the data to the rest of the application.
+  = Get puzzle data from a service
+    = Add in a service.
+    = Add a method on it that pulls in the raw data.
+  = Inject it into the main component and confirm the presence of puzzle instances.
+  = Display the puzzles in simple, ugly cards.
 * I'll need a component that allows the user to pick a puzzle. It should have a set of cards with the complexity and obscurity ratings on it.
-* I'll need a main component that provides the wrapper for everything. This is where I'll add a service to serve the data to the rest of the application.
 * Here is where I'll create the service which will get the data and serve it to the main component (just a simple ts file for now)
 * Each puzzle object will get a class wrapper that gives it methods like creating the puzzle pieces which involves 1) shuffling the words of the solution phrase and 2) generating red herring/gibberish cards
 * Build the card view which takes an array of puzzle pieces and creates each individual car in a template. Show off my CSS skills here!
