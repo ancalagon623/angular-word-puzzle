@@ -3,11 +3,11 @@ import { PuzzleService } from '../services/puzzle.service';
 import { Puzzle } from '../models/puzzle';
 
 @Component({
-  selector: 'app-mf-comp',
-  templateUrl: './mf-comp.component.html',
-  styleUrls: ['./mf-comp.component.css']
+  selector: 'app-game',
+  templateUrl: './game.component.html',
+  styleUrls: ['./game.component.css']
 })
-export class MfCompComponent {
+export class GameComponent {
   puzzles: Puzzle[];
 
   constructor (puzzleService: PuzzleService) {

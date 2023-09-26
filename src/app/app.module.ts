@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MfCompComponent } from './mf-comp/mf-comp.component';
+import { GameComponent } from './game/game.component';
+import { AnswerInputComponent } from './game/answer-input/answer-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MfCompComponent
+    GameComponent,
+    AnswerInputComponent
   ],
   imports: [
     BrowserModule

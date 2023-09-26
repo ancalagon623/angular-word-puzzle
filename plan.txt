@@ -20,7 +20,7 @@ Technical Plan
     = Add in a service.
     = Add a method on it that pulls in the raw data.
   = Inject it into the main component and confirm the presence of puzzle instances.
-  = Display the puzzles in simple, ugly cards.
+  = Display the puzzles.
 * I'll need a component that allows the user to pick a puzzle. It should have a set of cards with the complexity and obscurity ratings on it.
 * Here is where I'll create the service which will get the data and serve it to the main component (just a simple ts file for now)
 * Each puzzle object will get a class wrapper that gives it methods like creating the puzzle pieces which involves 1) shuffling the words of the solution phrase and 2) generating red herring/gibberish cards
