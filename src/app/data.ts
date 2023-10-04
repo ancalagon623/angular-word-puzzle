@@ -1,6 +1,6 @@
-import { PuzzleOptions } from "./models/puzzle"
+import { PuzzleOptions, RawPuzzleData } from "./models/puzzle"
 
-export const rawPuzzles = [ 
+export const rawPuzzles: RawPuzzleData[] = [ 
   {
     id: PuzzleOptions.BBTheRoad,
     tag: 'bb-the-road',
