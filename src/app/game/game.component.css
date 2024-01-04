@@ -2,3 +2,9 @@
   display: flex;
   gap: 1em;
 }
+
+.puzzle-card {
+  flex: 1 0 10%;
+  padding: 5px;
+  border: 1px solid rgb(51, 119, 62);
+}
