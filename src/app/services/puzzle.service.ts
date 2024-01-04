@@ -6,6 +6,9 @@ import { Puzzle } from '../models/puzzle';
   providedIn: 'root'
 })
 export class PuzzleService {
+
+  constructor() {}
+
   getAllPuzzles () {
     const returnArray: Puzzle[] = [];
     for (let pzix = 0; pzix < rawPuzzles.length; pzix++) {
@@ -13,4 +16,6 @@ export class PuzzleService {
     }
     return returnArray;
   }
+
+
 }
