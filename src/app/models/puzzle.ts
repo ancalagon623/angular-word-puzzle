@@ -64,7 +64,7 @@ export class Puzzle {
     const solutionWords = this._fullSolution.trim().split(/\s\s|\s/);
 
     // calculate the length that the puzzle ought to be, based on the difficulty multipliers.
-    const numOfCards = Math.round(Puzzle.difficultyMultipliers[this.difficultyLevel] * solutionWords.length);
+    const numOfCards = Puzzle.roundToNearestMultiple(Puzzle.difficultyMultipliers[this.difficultyLevel] * solutionWords.length, 5);
 
     for (let ix = 0; ix < numOfCards; ix++) {
       if (solutionWords[ix]) {

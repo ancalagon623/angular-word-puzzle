@@ -12,6 +12,10 @@ MINIGAME STRUCTURE (MVP)
   - There is a guessing bar that allows the user to guess the phrase when they think they know the answer.
   - If they get the answer, increase their score by an amount proportional to the difficulty of the puzzle.
 
+Up Next:
+* Build up the routing/design the user flow from the initial page with the puzzles to the actual puzzle pieces and implement a skeletal layout
+* Build the game logic, i.e. create methods and properties and an input that allow the user to guess the solution to the puzzle.
+* Build the component state that controls the flipping of the cards/make the cards look cool with CSS
 
 Technical Plan
 - Clear the default template (comment it out so I can still reference it!)
@@ -21,16 +25,15 @@ Technical Plan
     - Add a method on it that pulls in the raw data.
   - Inject it into the main component and confirm the presence of puzzle instances.
   - Display the puzzles.
-* TODO Each puzzle object will get a class wrapper that gives it methods like creating the puzzle pieces which involves 1) shuffling the words of the solution phrase and 2) generating red herring/gibberish cards
-  * Questions to answer: 
+- TODO Each puzzle object will get a class wrapper that gives it methods like creating the puzzle pieces which involves 1) shuffling the words of the solution phrase and 2) generating red herring/gibberish cards
+  - Questions to answer: 
     - How many total cards will each puzzle have? Should it depend on the number of words?
     - What values/content should the gibberish cards contain?
     - Initial plan is to use a source array for all the possible gibberish words. Eventually I'll make a database to contain phrases to pull from and use AI techniques.
-  * TODO Write a method that creates the puzzle: it takes a solution string and sets the puzzle property to an array of strings which the puzzle cards will be made out of. The array is 2x as long as the number of words in the puzzle phrase on normal 
-    difficulty, three times as long when the difficulty is hard, and 1.5 times when the difficulty is easy, rounded to the nearest multiple of 5 (which is how long each row of cards will be). 
-    * 
+  - TODO Write a method that creates the puzzle: it takes a solution string and sets the puzzle property to an array of strings which the puzzle cards will be made out of. The array is 2x as long as the number of words in the puzzle phrase on normal 
+    difficulty, three times as long when the difficulty is hard, and 1.5 times when the difficulty is easy, rounded to the nearest multiple of 5 (which is how long each row of cards will be).
 * I'll need a component that allows the user to pick a puzzle. It should have a set of cards with the complexity and obscurity ratings on it.
-* Here is where I'll create the service which will get the data and serve it to the main component (just a simple ts file for now)
-* Build the card view which takes an array of puzzle pieces and creates each individual car in a template. Show off my CSS skills here!
+- Here is where I'll create the service which will get the data and serve it to the main component (just a simple ts file for now)
+* Build the card view which takes an array of puzzle pieces and creates each individual card in a template. Show off my CSS skills here!
 * Design the input. Its just an input that takes a string and has a check anser button
 * If I do well, make a success screen/effect?
