@@ -1,13 +1,16 @@
-.options-bar {
+.puzzle-options-bar {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
 .puzzle-card {
-  flex: 1 0 10%;
+  flex: 1 0 100px;
   padding: 20px;
   border: 1px solid rgb(51, 119, 62);
   aspect-ratio: 1;
+  transition: ease-in 0.15s;
+  transition-property: transform background-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,4 +24,22 @@
 
 .inner-card {
   width: 100%;
+  text-align: center;
+}
+
+/* 
+.game-wrapper {
+
+} */
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+}
+
+.card {
+  background-color: antiquewhite;
+  aspect-ratio: 1;
+  text-align: center; 
 }

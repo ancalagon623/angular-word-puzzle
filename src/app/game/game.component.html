@@ -1,9 +1,19 @@
-<div class="options-bar">
-  <div class="puzzle-card" *ngFor="let puzzle of puzzles">
+<div class="puzzle-options-bar" *ngIf="!puzzleInProgress">
+  <div class="puzzle-card" *ngFor="let puzzle of puzzles" (click)="loadPuzzleGame(puzzle, $event)">
 
     <div class="inner-card">
       {{ puzzle.fullSolution }}
     </div>
     
+  </div>
+</div>
+
+<div class="game-wrapper" *ngIf="puzzleInProgress">
+  <app-answer-input></app-answer-input>
+  
+  <div class="game-cards">
+    <div class="card" *ngFor="let word of puzzleInProgress.puzzlePieces">
+      {{ word }}
+    </div>
   </div>
 </div>

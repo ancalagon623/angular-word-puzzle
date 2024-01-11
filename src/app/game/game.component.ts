@@ -9,9 +9,14 @@ import { Puzzle } from '../models/puzzle';
 })
 export class GameComponent {
   puzzles: Puzzle[];
+  puzzleInProgress: Puzzle | undefined;
 
   constructor (puzzleService: PuzzleService) {
     this.puzzles = puzzleService.getAllPuzzles()
+  }
+
+  loadPuzzleGame (puzzle: Puzzle, event: any) {
+    this.puzzleInProgress = puzzle;
   }
 
 }
