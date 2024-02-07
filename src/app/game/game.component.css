@@ -1,10 +1,53 @@
-.options-bar {
+.puzzle-options-bar {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
 .puzzle-card {
-  flex: 1 0 10%;
-  padding: 5px;
+  flex: 1 0 100px;
+  padding: 20px;
   border: 1px solid rgb(51, 119, 62);
+  aspect-ratio: 1;
+  transition: ease-in 0.15s;
+  transition-property: transform background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.puzzle-card:hover {
+  background-color: rgb(197, 243, 122);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.inner-card {
+  width: 100%;
+  text-align: center;
+}
+
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: antiquewhite;
+  aspect-ratio: 1;
+  text-align: center; 
+}
+
+.inactive {
+  display: none;
 }
