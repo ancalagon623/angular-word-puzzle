@@ -13,7 +13,7 @@
   
   <div class="game-cards">
     <div class="card" *ngFor="let word of puzzleInProgress.puzzlePieces">
-      {{ word }}
+      <div class="phrase-container" [ngClass]="{'phrase-container': true, 'inactive': activeCard !== word}">{{ word }}</div>
     </div>
   </div>
 </div>

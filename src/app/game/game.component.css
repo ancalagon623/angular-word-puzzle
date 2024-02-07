@@ -27,19 +27,27 @@
   text-align: center;
 }
 
-/* 
-.game-wrapper {
 
-} */
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
 .game-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2em;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .card {
   background-color: antiquewhite;
   aspect-ratio: 1;
   text-align: center; 
+}
+
+.inactive {
+  display: none;
 }
