@@ -1,3 +1,5 @@
+import { Card } from "./card";
+
 export enum PuzzleOptions {
   BBTheRoad,
   JKJourney,
@@ -9,6 +11,7 @@ export interface RawPuzzleData {
   id: PuzzleOptions;
   tag: string;
   solution: string;
+  author: string;
   complexity: number;
   obscurity: number;
 }
@@ -22,6 +25,7 @@ export class Puzzle {
   private _difficulty: number;
 
   private static difficultyMultipliers = [1.5, 2, 3];
+  private static difficultyLevels = [0, 1, 2];
   private static fillers = ['Nope.', 'Nothin\'.', 'So close!', 'Close, but no cigar', 'Fry, fry a hen', 'Missed it by *that* much'];
 
   /**
@@ -134,7 +138,7 @@ export class Puzzle {
   }
 
   set difficultyLevel (level: number) {
-    if ([0, 1, 2].includes(level)) {
+    if (Puzzle.difficultyLevels.includes(level)) {
       this.generatePuzzleFromSolution();
       this._difficulty = level;
     } else {
